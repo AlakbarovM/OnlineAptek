@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./Brends.module.scss";
 import { FaAnglesRight } from "react-icons/fa6";
 import { FaAnglesLeft } from "react-icons/fa6";
+import { Element } from "react-scroll";
 const Brends = () => {
   const [index, setIndex] = useState(0);
 
@@ -46,7 +47,7 @@ const Brends = () => {
   };
 
   return (
-    <div className={styles.brend}>
+    <Element className={styles.brend} name="Brends" >
       <div className={styles.container}>
         <div className={styles.topBrend}>
           <h1>
@@ -71,7 +72,7 @@ const Brends = () => {
           </button>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

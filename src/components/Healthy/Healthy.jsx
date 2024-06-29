@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './Healthy.module.scss';
+import { Element } from 'react-scroll';
 
 const Healthy = () => {
   return (
-    <div className={styles.healthy}>
+    <Element className={styles.healthy} name='healthy' >
       <div className={styles.container}>
         <div className={styles.topHelathy}>
           <h1>Bizim Çeşidlərimiz</h1>
@@ -31,7 +32,7 @@ const Healthy = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

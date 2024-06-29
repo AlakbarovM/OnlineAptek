@@ -9,8 +9,13 @@ import AloeAbout from "../AloeAbout/AloeAbout";
 import AloeCart from "../AloeCart/AloeCart";
 import PrivilegeFootor from "../PrivilegeFootor/PrivilegeFootor";
 import { LanguageContext } from "../../LanguageContext/LanguageContext";
+import { useNavigate } from "react-router";
 
 const PrivilegeHeader = () => {
+  const navigate = useNavigate()
+  const goAccount = () => {
+    navigate("/account")
+  }
   const { language, toggleLanguage, texts } = useContext(LanguageContext);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -50,8 +55,9 @@ const PrivilegeHeader = () => {
             <p onClick={() => copyToClipboard(texts[language].phoneNumber)}>
               {texts[language].phoneNumber}
             </p>
-            <button>
+            <button onClick={goAccount} style={{cursor:"pointer"}}>
               <CiUser size={20} />
+              
               {texts[language].contact}
             </button>
             <div className={styles.dropdownContainer}>

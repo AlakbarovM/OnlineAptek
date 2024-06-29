@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-scroll";
 import Healthy from "../Healthy/Healthy";
 import { useNavigate } from "react-router";
+import Login from "../../Login/Login";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,10 @@ const navigate = useNavigate()
 const goAloeCart  = () => {
   navigate('/PrivilegeHeader')
 }
+const goAccount  = () => {
+  navigate('/account')
+}
+
   return (
     <div className={styles.header}>
       <div className={styles.container}>
@@ -24,7 +29,7 @@ const goAloeCart  = () => {
         <nav className={styles.headNav}>
           <div className={styles.headNavBtn}>
             <button onClick={goAloeCart} className={styles.pri}>Privilege Club</button>
-            <button className={styles.aloe}>Aloe + karti</button>
+            <button onClick={goAccount} className={styles.aloe}>Aloe + karti</button>
           </div>
           <ul className={`${isOpen ? styles.open : ""}`}>
             <li>

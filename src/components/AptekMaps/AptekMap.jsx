@@ -3,6 +3,7 @@ import styles from './AptekMap.module.scss';
 import { BiMap } from 'react-icons/bi';
 import { IoCallOutline } from 'react-icons/io5';
 import { AiOutlineClockCircle } from 'react-icons/ai';
+import { Element } from 'react-scroll';
 
 const AptekMap = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Şu anki görüntülenen bileşenin indeksi
@@ -59,7 +60,7 @@ const AptekMap = () => {
   };
 
   return (
-    <div className={styles.apk}>
+    <Element className={styles.apk} name="AptekMaps" >
       <div className={styles.container}>
         <div className={styles.topApk}>
           <h1>Aloe+apteklərini tapın</h1>
@@ -76,7 +77,7 @@ const AptekMap = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

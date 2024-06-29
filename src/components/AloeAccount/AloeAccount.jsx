@@ -24,7 +24,7 @@ const AloeAccount = () => {
             </div>  
         </div>
     </div>
-    <AloeAccountCart/>
+  <AloeAccountCart/>
     </div>
   )
 }

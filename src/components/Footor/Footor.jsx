@@ -6,10 +6,10 @@ import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-
+import { Element } from "react-scroll";
 const Footor = () => {
   return (
-    <div className={styles.footor}>
+    <Element className={styles.footor} name="Footor" >
       <div className={styles.container}>
         <div className={styles.topFot}>
           <div className={styles.leftTopFot}>
@@ -61,7 +61,7 @@ const Footor = () => {
             <p>©Aloe 2024. Müəllif hüquqları qorunur</p>
             <p><span>Murad Ələkbərov</span> tərəfindən hazırlanmışdır</p>
         </div>
-    </div>
+    </Element>
   );
 };
 

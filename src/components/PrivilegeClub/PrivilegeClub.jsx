@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { LanguageContext } from '../../LanguageContext/LanguageContext'; // LanguageContext import edildi
 import { useNavigate } from 'react-router';
-
+import { Element } from 'react-scroll';
 const PrivilegeClub = () => {
   const navigate = useNavigate()
   const goAccount = () => {
@@ -27,7 +27,7 @@ const PrivilegeClub = () => {
   };
 
   return (
-    <div className={styles.privilegeClub}>
+    <Element className={styles.privilegeClub} name="club" >
       <div className={styles.container}>
         <Slider {...settings}>
           <div>
@@ -44,7 +44,7 @@ const PrivilegeClub = () => {
           </div>
         </Slider>
       </div>
-    </div>
+    </Element>
   );
 };
 
